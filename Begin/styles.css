@@ -21,6 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
 }
 .robot {
   width: 200px;
@@ -30,6 +31,7 @@ body {
   position: relative;
   text-align: center;
   cursor: default;
+  border-radius: 5px;
 }
 .mask {
   width: 200px;
@@ -38,12 +40,13 @@ body {
   overflow: hidden;
   top: 0;
   left: 0;
-  background-color: rgba(38, 95, 142, 0.4);
+  background-color: rgba(33, 127, 152, 0.463);
   transition: all 0.5s linear;
   opacity: 0;
 }
 
 .shop {
+  border-radius: 5px;
   display: inline-block;
   text-decoration: none;
   padding: 7px 14px;
@@ -71,3 +74,30 @@ h2 {
   opacity: 0;
 }
 /* Hover animations */
+
+.robot:hover img { 
+  transform: scale(9);
+  opacity: 0;
+  transition: all 0.7s ease-out;
+}
+.robot:hover .mask {
+  opacity: 1;
+  border: rgba(56, 123, 178, 0.655) solid 1px;
+  border-radius: 5px;
+}
+
+.robot:hover h2,
+.robot:hover .shop {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*link animation on hover*/
+
+.shop:hover{
+  background-color: rgb(227, 227, 227);
+  color: black;
+  transform: scale(2);
+  transform: translate(-2);
+  transition: all 0.7s ease-out;
+}
